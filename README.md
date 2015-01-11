@@ -17,3 +17,4 @@ Things I wish I had time to do:
 - Music/SoundFX
 - Allowing users to select difficulty and number of tiles.
 - Infinite scrolling on image selection screen. (For now, loading more requires pulling to refresh)
+- Some cleanup and error handling.
