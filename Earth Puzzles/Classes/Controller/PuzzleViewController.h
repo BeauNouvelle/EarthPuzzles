@@ -1,5 +1,5 @@
 //
-//  ViewController.h
+//  PuzzleViewController.h
 //  Earth Puzzles
 //
 //  Created by Beau Young on 10/01/2015.
@@ -7,9 +7,10 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "ImageData.h"
 
-@interface ViewController : UIViewController
+@interface PuzzleViewController : UIViewController
 
+@property (nonatomic, strong) ImageData *imageData;
 
 @end
-
