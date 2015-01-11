@@ -4,11 +4,13 @@ Being able to download images keeps the app light, and the puzzles always intere
 It uses a few iOS 8 APIs so will only run on those devices.
 
 Things I got done:
+
 - Universal iPad Support. Looks awesome.
 - Downloading and Caching of images from the above mentioned subreddit. (Thanks to SDWebImage for the easy caching).
 - App Icon.
 
 Things I wish I had time to do:
+
 - Sliding entire rows. 
 - Support for device rotation.
 - Backwards compatibility for devices running versions of iOS prior to iOS8.
