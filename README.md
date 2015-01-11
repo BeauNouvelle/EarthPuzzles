@@ -8,6 +8,9 @@ Things I got done:
 - Universal iPad Support. Looks awesome.
 - Downloading and Caching of images from the above mentioned subreddit. (Thanks to SDWebImage for the easy caching).
 - App Icon.
+- Tap to move tile. 
+- Tiles can be dragged into position.
+- Move counter.
 
 Things I wish I had time to do:
 
@@ -17,3 +20,4 @@ Things I wish I had time to do:
 - Music/SoundFX
 - Allowing users to select difficulty and number of tiles.
 - Infinite scrolling on image selection screen. (For now, loading more requires pulling to refresh)
+- Some cleanup and error handling.
