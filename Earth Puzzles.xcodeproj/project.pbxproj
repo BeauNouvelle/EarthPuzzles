@@ -36,7 +36,6 @@
 		8BBB4FAC1A611732001240F5 /* UIImageView+UIActivityIndicatorForSDWebImage.m in Sources */ = {isa = PBXBuildFile; fileRef = 8BBB4FAB1A611732001240F5 /* UIImageView+UIActivityIndicatorForSDWebImage.m */; };
 		8BBB4FB01A6117F3001240F5 /* ImageTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 8BBB4FAE1A6117F3001240F5 /* ImageTableViewCell.m */; };
 		8BBB4FB11A6117F3001240F5 /* ImageTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8BBB4FAF1A6117F3001240F5 /* ImageTableViewCell.xib */; };
-		8BBB4FB41A616DD3001240F5 /* TileImageView.m in Sources */ = {isa = PBXBuildFile; fileRef = 8BBB4FB31A616DD3001240F5 /* TileImageView.m */; };
 		8BBB4FB71A616FCA001240F5 /* UIImage+Extras.m in Sources */ = {isa = PBXBuildFile; fileRef = 8BBB4FB61A616FCA001240F5 /* UIImage+Extras.m */; };
 		8BBB4FBA1A623C6C001240F5 /* TileBoard.m in Sources */ = {isa = PBXBuildFile; fileRef = 8BBB4FB91A623C6C001240F5 /* TileBoard.m */; };
 		8BBB4FBD1A623D20001240F5 /* TileBoardView.m in Sources */ = {isa = PBXBuildFile; fileRef = 8BBB4FBC1A623D20001240F5 /* TileBoardView.m */; };
@@ -110,8 +109,6 @@
 		8BBB4FAD1A6117F3001240F5 /* ImageTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ImageTableViewCell.h; sourceTree = "<group>"; };
 		8BBB4FAE1A6117F3001240F5 /* ImageTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ImageTableViewCell.m; sourceTree = "<group>"; };
 		8BBB4FAF1A6117F3001240F5 /* ImageTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ImageTableViewCell.xib; sourceTree = "<group>"; };
-		8BBB4FB21A616DD3001240F5 /* TileImageView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TileImageView.h; sourceTree = "<group>"; };
-		8BBB4FB31A616DD3001240F5 /* TileImageView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TileImageView.m; sourceTree = "<group>"; };
 		8BBB4FB51A616FCA001240F5 /* UIImage+Extras.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+Extras.h"; sourceTree = "<group>"; };
 		8BBB4FB61A616FCA001240F5 /* UIImage+Extras.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+Extras.m"; sourceTree = "<group>"; };
 		8BBB4FB81A623C6C001240F5 /* TileBoard.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TileBoard.h; sourceTree = "<group>"; };
@@ -238,8 +235,6 @@
 				8BBB4FAD1A6117F3001240F5 /* ImageTableViewCell.h */,
 				8BBB4FAE1A6117F3001240F5 /* ImageTableViewCell.m */,
 				8BBB4FAF1A6117F3001240F5 /* ImageTableViewCell.xib */,
-				8BBB4FB21A616DD3001240F5 /* TileImageView.h */,
-				8BBB4FB31A616DD3001240F5 /* TileImageView.m */,
 				8BBB4FBB1A623D20001240F5 /* TileBoardView.h */,
 				8BBB4FBC1A623D20001240F5 /* TileBoardView.m */,
 			);
@@ -425,7 +420,6 @@
 				8BBB4F9D1A611683001240F5 /* SDWebImageDecoder.m in Sources */,
 				8BBB4F6F1A60E564001240F5 /* PuzzleViewController.m in Sources */,
 				8BBB4F991A611683001240F5 /* MKAnnotationView+WebCache.m in Sources */,
-				8BBB4FB41A616DD3001240F5 /* TileImageView.m in Sources */,
 				8BBB4F9C1A611683001240F5 /* SDWebImageCompat.m in Sources */,
 				8BBB4FAC1A611732001240F5 /* UIImageView+UIActivityIndicatorForSDWebImage.m in Sources */,
 				8BBB4F6C1A60E551001240F5 /* ImageSelectionTableViewController.m in Sources */,

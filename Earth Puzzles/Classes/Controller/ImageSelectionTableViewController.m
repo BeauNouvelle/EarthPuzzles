@@ -99,6 +99,8 @@
     if ([sender isKindOfClass:[ImageData class]]) {
         destinationVC.imageData = sender;
     }
+    
+    self.title = @"";
 }
 
 

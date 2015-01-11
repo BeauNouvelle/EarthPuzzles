@@ -17,7 +17,7 @@
 - (void)setTileAtCoordinate:(CGPoint)coor with:(NSNumber *)number;
 - (NSNumber *)tileAtCoordinate:(CGPoint)coor;
 
-- (BOOL)canMoveTile:(CGPoint)coor;
+- (BOOL)canMoveTile:(CGPoint)coordinates;
 - (CGPoint)shouldMove:(BOOL)move tileAtCoordinate:(CGPoint)coor;
 - (BOOL)isAllTilesCorrect;
 

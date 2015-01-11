@@ -17,16 +17,13 @@ static const NSInteger TileMaxSize = 6;
 
 @end
 
-
 @implementation TileBoard
 
-- (instancetype)init
-{
+- (instancetype)init {
     return nil;
 }
 
-- (instancetype)initWithSize:(NSInteger)size
-{
+- (instancetype)initWithSize:(NSInteger)size {
     if (!(self = [super init]) || ![self isSizeValid:size]) return nil;
     
     self.size = size;
@@ -34,18 +31,15 @@ static const NSInteger TileMaxSize = 6;
     return self;
 }
 
-- (BOOL)isSizeValid:(NSInteger)size
-{
+- (BOOL)isSizeValid:(NSInteger)size {
     return (size >= TileMinSize && size <= TileMaxSize);
 }
 
-- (BOOL)isCoordinateInBound:(CGPoint)coor
-{
+- (BOOL)isCoordinateInBound:(CGPoint)coor {
     return (coor.x > 0 && coor.x <= self.size && coor.y > 0 && coor.y <= self.size);
 }
 
-- (NSMutableArray *)tileValuesForSize:(NSInteger)size
-{
+- (NSMutableArray *)tileValuesForSize:(NSInteger)size {
     int value = 1;
     NSMutableArray *tiles = [NSMutableArray arrayWithCapacity:size];
     for (int i = 0; i < size; i++)
@@ -59,40 +53,34 @@ static const NSInteger TileMaxSize = 6;
     return tiles;
 }
 
-- (void)setSize:(NSInteger)size
-{
+- (void)setSize:(NSInteger)size {
     if ([self isSizeValid:size]) _tiles = [self tileValuesForSize:size];
 }
 
-- (NSInteger)size
-{
+- (NSInteger)size {
     return [_tiles count];
 }
 
-- (void)setTileAtCoordinate:(CGPoint)coor with:(NSNumber *)number
-{
+- (void)setTileAtCoordinate:(CGPoint)coor with:(NSNumber *)number {
     if ([self isCoordinateInBound:coor])
         self.tiles[(int)coor.y-1][(int)coor.x-1] = number;
 }
 
-- (NSNumber *)tileAtCoordinate:(CGPoint)coor
-{
+- (NSNumber *)tileAtCoordinate:(CGPoint)coor {
     if ([self isCoordinateInBound:coor])
         return self.tiles[(int)coor.y-1][(int)coor.x-1];
     
     return nil;
 }
 
-- (BOOL)canMoveTile:(CGPoint)coor
-{
-    return ( [[self tileAtCoordinate:CGPointMake(coor.x, coor.y-1)] isEqualToNumber:@0] || // upper neighbor
-            [[self tileAtCoordinate:CGPointMake(coor.x+1, coor.y)] isEqualToNumber:@0] || // right neighbor
-            [[self tileAtCoordinate:CGPointMake(coor.x, coor.y+1)] isEqualToNumber:@0] || // lower neighbor
-            [[self tileAtCoordinate:CGPointMake(coor.x-1, coor.y)] isEqualToNumber:@0] ); // left neighbor
+- (BOOL)canMoveTile:(CGPoint)coordinates {
+    return ( [[self tileAtCoordinate:CGPointMake(coordinates.x, coordinates.y-1)] isEqualToNumber:@0] || // upper neighbor
+            [[self tileAtCoordinate:CGPointMake(coordinates.x+1, coordinates.y)] isEqualToNumber:@0] || // right neighbor
+            [[self tileAtCoordinate:CGPointMake(coordinates.x, coordinates.y+1)] isEqualToNumber:@0] || // lower neighbor
+            [[self tileAtCoordinate:CGPointMake(coordinates.x-1, coordinates.y)] isEqualToNumber:@0] ); // left neighbor
 }
 
-- (CGPoint)shouldMove:(BOOL)move tileAtCoordinate:(CGPoint)coor
-{
+- (CGPoint)shouldMove:(BOOL)move tileAtCoordinate:(CGPoint)coor {
     if (![self canMoveTile:coor]) return CGPointZero;
     
     CGPoint lowerNeighbor = CGPointMake(coor.x, coor.y+1);
@@ -120,8 +108,7 @@ static const NSInteger TileMaxSize = 6;
     return neighbor;
 }
 
-- (void)shuffle:(NSInteger)times
-{
+- (void)shuffle:(NSInteger)times {
     for (int t = 0; t < times; t++) {
         NSMutableArray *validMoves = [NSMutableArray array];
         
@@ -135,34 +122,27 @@ static const NSInteger TileMaxSize = 6;
             }
         }
         
-        NSValue *v = validMoves[arc4random_uniform([validMoves count])];
+        NSValue *v = validMoves[arc4random_uniform((uint32_t)[validMoves count])];
         CGPoint p = [v CGPointValue];
         [self shouldMove:YES tileAtCoordinate:p];
     }
 }
 
-- (BOOL)isAllTilesCorrect
-{
+- (BOOL)isAllTilesCorrect {
     int i = 1;
     BOOL correct = YES;
     
-    for (NSArray *values in self.tiles)
-    {
-        for (NSNumber *value in values)
-        {
-            if ([value integerValue] != i)
-            {
+    for (NSArray *values in self.tiles) {
+        for (NSNumber *value in values) {
+            if ([value integerValue] != i) {
                 correct = NO;
                 break;
             }
-            else
-            {
+            else {
                 i = (i < pow(self.size, 2) - 1)? i+1 : 0;
             }
-            
         }
     }
-    
     return correct;
 }
 

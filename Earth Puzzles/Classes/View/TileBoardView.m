@@ -156,7 +156,6 @@ typedef enum {
         if (self.delegate) [self.delegate tileBoardView:self tileDidMove:position];
         [self tileWasMoved];
     }];
-    
 }
 
 - (UIImageView *)tileViewAtPosition:(CGPoint)position {

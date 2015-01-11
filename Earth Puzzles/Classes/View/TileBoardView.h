@@ -13,7 +13,7 @@
 
 @interface TileBoardView : UIView
 
-@property (weak, nonatomic) IBOutlet id<TileBoardViewDelegate> delegate;
+@property (weak, nonatomic) id<TileBoardViewDelegate> delegate;
 
 - (instancetype)initWithImage:(UIImage *)image size:(NSInteger)size frame:(CGRect)frame;
 - (void)playWithImage:(UIImage *)image size:(NSInteger)size;
