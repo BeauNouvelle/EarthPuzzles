@@ -22,6 +22,10 @@
 
 @implementation ImageSelectionTableViewController
 
+- (void)viewWillAppear:(BOOL)animated {
+    self.title = @"Choose a puzzle";
+}
+
 - (void)viewDidLoad {
     [super viewDidLoad];
     
@@ -35,12 +39,12 @@
     
     self.imageDataFetcher = [[ImageDataFetcher alloc] init];
     self.imageDataFetcher.delegate = self;
-    [self.imageDataFetcher fetchImageData];
+    [self.imageDataFetcher fetchListOfImages];
 }
 
 - (void)fetchImageData:(id)sender {
     if (self.imageDataFetcher) {
-        [self.imageDataFetcher fetchImageData];
+        [self.imageDataFetcher fetchListOfImages];
     }
 }
 

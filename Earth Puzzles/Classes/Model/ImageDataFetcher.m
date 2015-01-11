@@ -17,7 +17,7 @@
 
 @implementation ImageDataFetcher
 
-- (void)fetchImageData {
+- (void)fetchListOfImages {
     NSURLSession *session = [NSURLSession sharedSession];
     
     [[session dataTaskWithURL:[self imageDataURL] completionHandler:^(NSData *data, NSURLResponse *response, NSError *error) {
@@ -53,6 +53,7 @@
         else {
             NSLog(@"No data has returned. Possible network issue.");
         }
+
     }] resume];
 }
 

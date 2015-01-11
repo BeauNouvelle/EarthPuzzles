@@ -15,9 +15,9 @@
 @property (nonatomic, weak) id <ImageDataFetcherDelegate> delegate;
 
 /*!
- Performs the network call that will download the image data, and notifies the delegate when completed.
+ Performs the network call that will download the image data, and notifies the delegate when completed. This is for multiple images.
  */
-- (void)fetchImageData;
+- (void)fetchListOfImages;
 
 @end
 
