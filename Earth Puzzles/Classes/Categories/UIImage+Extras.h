@@ -10,6 +10,7 @@
 
 @interface UIImage (Extras)
 
+- (UIImage*)imageByScalingAndCroppingForSize:(CGSize)targetSize;
 - (UIImage *)resizedImageWithSize:(CGSize)size;
 - (UIImage *)cropImageFromFrame:(CGRect)frame;
 

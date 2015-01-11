@@ -10,6 +10,7 @@
 #import "SDWebImageManager.h"
 #import "TileBoard.h"
 #import "TileBoardView.h"
+#import "UIImage+Extras.h"
 
 #define TILE_SPACING 1
 #define SHUFFLE_NUMBER 20
@@ -70,7 +71,7 @@ typedef enum {
 
 - (void)setupGameWithPhoto:(UIImage *)photo {
     [self.board playWithImage:photo size:4];
-    [self.board shuffleTimes:50];
+    [self.board shuffleTimes:1];
     self.moves = 0;
 }
 
@@ -107,7 +108,8 @@ typedef enum {
                         completed:^(UIImage *image, NSError *error, SDImageCacheType cacheType, BOOL finished, NSURL *imageURL) {
                             
                             if (image) {
-                                completion(image);
+                                CGSize size = CGSizeMake(2000, 2000);
+                                completion([image imageByScalingAndCroppingForSize:size]);
                                 [_progressView removeFromSuperview];
                             }
                         }];
