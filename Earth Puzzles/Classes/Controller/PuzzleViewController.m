@@ -70,8 +70,8 @@ typedef enum {
 }
 
 - (void)setupGameWithPhoto:(UIImage *)photo {
-    [self.board playWithImage:photo size:50];
-    [self.board shuffleTimes:1];
+    [self.board playWithImage:photo size:4];
+    [self.board shuffleTimes:50];
     self.moves = 0;
 }
 
