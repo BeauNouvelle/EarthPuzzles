@@ -60,10 +60,10 @@
 - (NSURL *)imageDataURL {
     NSURL *url;
     if (self.lastImageIdentifier) {
-        url = [NSURL URLWithString:[NSString stringWithFormat:@"http://www.reddit.com/r/EarthPorn/.json?limit=30&after=%@", self.lastImageIdentifier]];
+        url = [NSURL URLWithString:[NSString stringWithFormat:@"https://www.reddit.com/r/EarthPorn/.json?limit=30&after=%@", self.lastImageIdentifier]];
     }
     else {
-        url = [NSURL URLWithString:[NSString stringWithFormat:@"http://www.reddit.com/r/EarthPorn/.json?limit=30"]];
+        url = [NSURL URLWithString:[NSString stringWithFormat:@"https://www.reddit.com/r/EarthPorn/.json?limit=30"]];
     }
     return url;
 }
